@@ -4,12 +4,12 @@ var connection = mysql.createConnection({
     port: 3306,
     // password: 'admin',
     user: 'root',
-    // database: 'my_database',
+    database: 'oee',
 });
 
 connection.connect();
 
-connection.query('show databases', function (error, results, fields) {
+connection.query('select * from dbmesin', function (error, results, fields) {
     if (error) throw error;
     console.log(results);
 });
